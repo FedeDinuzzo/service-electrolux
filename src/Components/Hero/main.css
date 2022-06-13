@@ -1,0 +1,53 @@
+.heroContainer {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background: #090B12;
+    display: grid; 
+};
+
+.heroContent {
+    
+}
+
+.heroImg {
+    display: none;
+}
+
+.heroImgMobile {
+    display: block;
+    width: 100%;
+    height: 100% ;
+    background-image: url(../../Assets/Img/heroImgMobile.webp);
+    background-position: 60%;
+}
+
+button {
+    width: 140px;
+    height: 50px;
+    color: #fff;
+    background: linear-gradient(90.18deg, #30CEDF 0.15%, #1940B5 99.86%);
+    border-radius: 8px;
+    border-style: none;
+}
+
+@media (min-width: 900px) {
+    .heroImgMobile {
+        display: none;
+    }
+
+    .heroImg {
+        display: block;
+        width: 50%;
+        height: 80%;
+        background-image: url(../../Assets/Img/heroImg.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+    }
+
+    .heroContainer {
+        grid-template-columns: 2;
+    };
+}
