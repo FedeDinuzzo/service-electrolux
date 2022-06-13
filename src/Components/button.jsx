@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Button = styled.button`
     background-color: #fff;
-    border: 2px solid red;
+    border: 2px solid green;
     transition: all .3s ease;
 
     &:hover {
