@@ -1,20 +1,26 @@
-html {
-  scroll-behavior: smooth;
+import createGlobalStyle from "styled-components";
+
+const theme = {
+  html {
+    scroll-behavior: smooth
+  },
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: ;
+  },
+
+  h1, h2, h3, p {
+    color: #fff;
+  },
+
+  button {
+
+  };
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: ;
-}
-
-h1, h2, h3, p {
-  color: #fff;
-}
-
-button {
-
-}
+export default theme;
 
 /*===== VARIABLES CSS =====
 --font-semi: 400;
