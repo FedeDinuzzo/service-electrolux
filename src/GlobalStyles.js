@@ -1,26 +1,26 @@
 import createGlobalStyle from "styled-components";
 
-const theme = {
+const GlobalStyles = createGlobalStyle`
   html {
-    scroll-behavior: smooth
-  },
+    scroll-behavior: smooth;
+  }
 
   body {
     margin: 0;
     padding: 0;
     font-family: ;
-  },
+  }
 
   h1, h2, h3, p {
     color: #fff;
-  },
+  }
 
   button {
 
-  };
-}
+  }
+`
 
-export default theme;
+export default GlobalStyles;
 
 /*===== VARIABLES CSS =====
 --font-semi: 400;
