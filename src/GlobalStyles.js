@@ -1,6 +1,11 @@
 import { createGlobalStyle } from "styled-components";
+import theme from "./theme"
 
 const GlobalStyles = createGlobalStyle`
+  ::before,::after{
+    box-sizing: border-box;
+  }
+
   html {
     scroll-behavior: smooth;
   }
@@ -8,11 +13,37 @@ const GlobalStyles = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    font-family: ;
+    margin: var(header-height 0 0 0);
+    font-family: var(body-font);
+    color: var(white-color);
+    background-color: var(dark-color);
+    line-height: 1.6;
   }
 
-  h1, h2, h3, p {
+  @font-face {
+  font-family: 'GraphikRegular';
+  src: local('Lato'), url(../Assets/fonts/GraphikRegular.otf) format('opentype');
+  }
+
+  @font-face {
+  font-family: 'GraphikSemibold';
+  src: local('Lato'), url(../Assets/fonts/GraphikSemibold.otf) format('opentype');
+  }
+
+  @media (min-width: ${theme.breakpoints.large}) {
+    h1 {
+    font-size: ${theme.fontSizesLarge.h1FontSize};
+    };
+  }
+
+  h1, h2 {
     color: #fff;
+    font-family: 'Graphik Semibold';
+  }
+
+  h3, p {
+    color: #fff;
+    font-family: 'Graphik Regular';
   }
 
   button {
@@ -22,61 +53,7 @@ const GlobalStyles = createGlobalStyle`
 
 export default GlobalStyles;
 
-/*===== VARIABLES CSS =====
---font-semi: 400;
---font-bold: 700;
---header-height: 3.75rem;
-*/
-/*===== COLORES =====
---first-color: #E2C86B;
---first-color-alt: #987700;
---white-color: #FAFAFF;
---dark-color: #141417;
---dark-color-light: #24242E;
---gray-color: #5A5C6D;
-*/
-/*===== FUENTE Y TIPOGRAFIA =====
---body-font: 'Syncopate', sans-serif;
---big-font-size: 3rem;
---h1-font-size: 2rem;
---h2-font-size: 1.75rem;
---normal-font-size: 1rem;
---small-font-size: 0.9rem;
-
-@media screen and (min-widht: 768px){
-  --body-font: 'Syncopate', sans-serif;
-  --big-font-size: 5rem;
-  --h1-font-size: 3rem;
-  --h2-font-size: 2.5rem;
-  --normal-font-size: 1.25rem;
-  --small-font-size: 1rem;
-}
-*/
-/*===== MARGENES =====
---mb-1: .5rem;
---mb-2: 1rem;
---mb-3: 1.5rem;
---mb-4: 2rem;
---mb-5: 2.75rem;
---mb-6: 4rem;
-*/
 /*===== GENERAL PROPIERTIES =====
-::before,::after{
-  box-sizing: border-box;
-}
-
-html{
-    scroll-behavior: smooth;
-}
-
-body{
-    margin: var(header-height 0 0 0);
-    font-family: var(body-font);
-    color: var(white-color);
-    background-color: var(dark-color);
-    line-height: 1.6;
-}
-
 h1,h2,p{
     margin: 0;
 }
@@ -98,6 +75,7 @@ img{
   transition: .5s;
 }
 */
+
 /*===== CLASS CSS ===== 
 .button{
   background: linear-gradient(232.42deg, #BBA65C 0.73%, #876C10 99.02%);
