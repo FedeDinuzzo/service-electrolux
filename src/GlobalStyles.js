@@ -30,12 +30,6 @@ const GlobalStyles = createGlobalStyle`
   src: local('Lato'), url(../Assets/fonts/GraphikSemibold.otf) format('opentype');
   }
 
-  @media (min-width: ${theme.breakpoints.large}) {
-    h1 {
-    font-size: ${theme.fontSizesLarge.h1FontSize};
-    };
-  }
-
   h1, h2 {
     color: #fff;
     font-family: 'Graphik Semibold';
@@ -44,6 +38,24 @@ const GlobalStyles = createGlobalStyle`
   h3, p {
     color: #fff;
     font-family: 'Graphik Regular';
+  }
+
+  @media (min-width: ${theme.breakpoints.small}) {
+    h1 {
+      font-size: ${theme.fontSizesSmall.h1FontSize};
+    };
+  }
+
+  @media (min-width: ${theme.breakpoints.medium}) {
+    h1 {
+      font-size: ${theme.fontSizesMedium.h1FontSize};
+    };
+  }
+
+  @media (min-width: ${theme.breakpoints.large}) {
+    h1 {
+      font-size: ${theme.fontSizesLarge.h1FontSize};
+    };
   }
 
   button {

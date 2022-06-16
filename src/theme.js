@@ -1,7 +1,7 @@
 const theme = {
   breakpoints: {
-    small: '24rem',
-    medium: '48rem',
+    small: '22rem',
+    medium: '42rem',
     large: '64rem',
   },
   header: {
@@ -18,7 +18,7 @@ const theme = {
     smallFontSize: '0.75rem',
   },
   fontSizesMedium: {
-    h1FontSize: '2.75rem',
+    h1FontSize: '3rem',
     bigFontSize: '1.75rem',
     normalFontSize: '1rem',
     smallFontSize: '0.9rem',
