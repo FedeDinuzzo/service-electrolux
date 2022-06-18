@@ -13,8 +13,6 @@ const GlobalStyles = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    margin: var(header-height 0 0 0);
-    font-family: var(body-font);
     color: var(white-color);
     background-color: var(dark-color);
     line-height: 1.6;
@@ -31,18 +29,37 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h1, h2 {
-    color: #fff;
+    color: ${theme.colors.whiteColor};
     font-family: 'Graphik Semibold';
   }
 
-  h3, p {
-    color: #fff;
+  h3, p, a {
+    color:${theme.colors.whiteColor};
     font-family: 'Graphik Regular';
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
   }
 
   @media (min-width: ${theme.breakpoints.small}) {
     h1 {
       font-size: ${theme.fontSizesSmall.h1FontSize};
+    };
+    h2 {
+      font-size: ${theme.fontSizesSmall.bigFontSize};
+    };
+    h3 {
+      font-size: ${theme.fontSizesSmall.normalFontSize};
+    };
+    p {
+      font-size: ${theme.fontSizesSmall.smallFontSize};
     };
   }
 
@@ -50,11 +67,29 @@ const GlobalStyles = createGlobalStyle`
     h1 {
       font-size: ${theme.fontSizesMedium.h1FontSize};
     };
+    h2 {
+      font-size: ${theme.fontSizesMedium.bigFontSize};
+    };
+    h3 {
+      font-size: ${theme.fontSizesMedium.normalFontSize};
+    };
+    p {
+      font-size: ${theme.fontSizesMedium.smallFontSize};
+    };
   }
 
   @media (min-width: ${theme.breakpoints.large}) {
     h1 {
       font-size: ${theme.fontSizesLarge.h1FontSize};
+    };
+    h2 {
+      font-size: ${theme.fontSizesLarge.bigFontSize};
+    };
+    h3 {
+      font-size: ${theme.fontSizesLarge.normalFontSize};
+    };
+    p {
+      font-size: ${theme.fontSizesLarge.smallFontSize};
     };
   }
 
@@ -64,87 +99,3 @@ const GlobalStyles = createGlobalStyle`
 `
 
 export default GlobalStyles;
-
-/*===== GENERAL PROPIERTIES =====
-h1,h2,p{
-    margin: 0;
-}
-
-ul{
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-  
-a{
-  text-decoration: none;
-  color: var(first-color);
-}
-
-img{
-  max-width: 100%;
-  height: auto;
-  transition: .5s;
-}
-*/
-
-/*===== CLASS CSS ===== 
-.button{
-  background: linear-gradient(232.42deg, #BBA65C 0.73%, #876C10 99.02%);
-  color: var(white-color);
-  padding: 1rem;
-  font-size: var(small-font-size);
-  font-weight: var(font-semi);
-  border: none;
-  transition: .5s;
-}
-
-.bnr {
-  border-radius: 40px 16px 8px 8px;
-}*/
-
-/*===== LAYOUT ===== 
-.header{
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  background-color: var(dark-color-light);
-}
-  
-.grid{
-  max-width: 1200px;
-  display: grid;
-  grid-template-columns: 100%;
-  gap: 2rem;
-  width: calc(100%);
-}
-
-h1{
-  font-size: var(h1-font-size);
-  text-align: center;
-}
-
-h2{
-  font-size: var(h2-font-size);
-  color: var(white-color);
-  font-weight: var(font-bold);
-  text-align: center;
-}
-
-h3{
-  font-size: var(normal-font-size);
-  font-weight: var(font-bold);
-}
-
-h4{
-  font-size: var(normal-font-size);
-  font-weight: var(font-semi);
-}
-
-p{
-  font-size: var(small-font-size);
-  font-weight: var(font-semi);
-}
-*/

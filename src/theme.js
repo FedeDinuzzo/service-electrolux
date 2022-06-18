@@ -14,14 +14,14 @@ const theme = {
   fontSizesSmall: {
     h1FontSize: '2rem',
     bigFontSize: '1.5rem',
-    normalFontSize: '0.9rem',
-    smallFontSize: '0.75rem',
+    normalFontSize: '1rem',
+    smallFontSize: '0.9rem',
   },
   fontSizesMedium: {
     h1FontSize: '3rem',
     bigFontSize: '1.75rem',
-    normalFontSize: '1rem',
-    smallFontSize: '0.9rem',
+    normalFontSize: '1.25rem',
+    smallFontSize: '1rem',
   },
   fontSizesLarge: {
     h1FontSize: '4rem',
@@ -32,11 +32,12 @@ const theme = {
   colors: {
     firstColor: '#30CEDF',
     firstColorAlt: '#1940B5',
-    firstColorLight: '#2C98EC',
+    blueColor: '#2C98EC',
+    blueColorAlt: '#0A1843',
     whiteColor: '#FFF',
     lightColor: '#BAD8F0',
     darkColor: '#1E1E1E',
-    darkColorLight: '#0A1843',
+    darkColorAlt: '#202439',
   },
   margins: {
     m1: '.5rem',
