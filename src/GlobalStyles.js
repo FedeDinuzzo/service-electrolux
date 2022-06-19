@@ -3,6 +3,7 @@ import theme from "./theme"
 
 const GlobalStyles = createGlobalStyle`
   ::before,::after{
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
 
@@ -10,7 +11,7 @@ const GlobalStyles = createGlobalStyle`
     scroll-behavior: smooth;
   }
 
-  body {
+  body {  
     margin: 0;
     padding: 0;
     color: var(white-color);

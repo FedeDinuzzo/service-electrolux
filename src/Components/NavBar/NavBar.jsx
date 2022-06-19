@@ -5,10 +5,10 @@ import NavItem from './NavItem'
 import { Link } from 'react-router-dom';
 import wppLogo from '../../Assets/Img/wpp-logo.png';
 
-const NavMobile = styled.div`
+const NavMobile = styled.nav`
   display: block;
   position: fixed;
-  bottom: 0;
+  bottom: 0px;
   width: 100vw;
   @media (min-width: 900px) {
     display: none;
