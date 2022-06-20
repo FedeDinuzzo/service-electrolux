@@ -3,7 +3,7 @@ import styled from "styled-components";
 import theme from '../../theme';
 import NavItem from './NavItem'
 import { Link } from 'react-router-dom';
-import wppLogo from '../../Assets/Img/wpp-logo.png';
+import wppLogo from '../../Assets/Img/wppLogo.svg';
 
 const NavMobile = styled.nav`
   display: block;
@@ -19,7 +19,7 @@ const NavMobileUl = styled.ul`
   display: flex;
   width: 100%;
   height: 30px;
-  background: ${theme.colors.blueColorAlt};
+  background: ${theme.colors.darkColorAlt};
 `
 
 const NavLeft = styled.div`
@@ -32,7 +32,7 @@ const NavLeft = styled.div`
   box-sizing: border-box;
   width: calc(50% - 18px);
   height: 60px;
-  background: ${theme.colors.blueColorAlt};
+  background: ${theme.colors.darkColorAlt};
   border-radius: 0 40px 0 0;
 `
 
@@ -46,12 +46,12 @@ const NavRight = styled.div`
   box-sizing: border-box;
   width: calc(50% - 18px);
   height: 60px;
-  background: ${theme.colors.blueColorAlt};
+  background: ${theme.colors.darkColorAlt};
   border-radius: 40px 0 0 0;
 `
 
 const WppLogo = styled.img`
-  background-color: ${theme.colors.blueColorAlt};
+  height: 70px;
   border-radius: 30px 30px 0 0;
   position: absolute;
   bottom: 10px;
