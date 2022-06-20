@@ -4,6 +4,7 @@ import theme from '../../theme';
 import NavItem from './NavItem'
 import { Link } from 'react-router-dom';
 import wppLogo from '../../Assets/Img/wppLogo.svg';
+import lavarropas from '../../Assets/Img/lavarropas.svg'
 
 const NavMobile = styled.nav`
   display: block;
@@ -34,6 +35,7 @@ const NavLeft = styled.div`
   height: 60px;
   background: ${theme.colors.darkColorAlt};
   border-radius: 0 40px 0 0;
+  padding: ${theme.margins.m2} 0;
 `
 
 const NavRight = styled.div`
@@ -51,14 +53,24 @@ const NavRight = styled.div`
 `
 
 const WppLogo = styled.img`
-  height: 70px;
-  border-radius: 30px 30px 0 0;
+  height: 72px;
   position: absolute;
-  bottom: 10px;
+  bottom: 12px;
   left: 0;
   right: 0;
   margin: auto;
   z-index: 10;
+`
+
+const ImgNav = styled.div`
+  text-align: center;
+  background-image: url(${lavarropas});
+  background-position: center;
+  border: none;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 32px;
+  width: 100%;
 `
 
 const NavDesktop = styled.div`
@@ -99,7 +111,7 @@ function NavBar() {
         </NavLeft>
           <WppLogo src={wppLogo} alt="" height="64px" width="64px"></WppLogo>
         <NavRight>  
-          <Link to="top" smooth={true}><NavItem content="HOME" to="/" /></Link>
+          <Link to="top" smooth={true}><ImgNav /><NavItem content="Lavarropas" to="/" /></Link>
           <Link to="top" smooth={true}><NavItem content="HOME" to="/" /></Link>
         </NavRight>
       </NavMobileUl>
