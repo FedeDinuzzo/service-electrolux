@@ -14,19 +14,19 @@ const GlobalStyles = createGlobalStyle`
   body {  
     margin: 0;
     padding: 0;
-    color: var(white-color);
-    background-color: var(dark-color);
-    line-height: 1.6;
+    color: ${theme.colors.whiteColor};
+    background-color: ${theme.colors.darkColor};
+    padding-bottom: 60px;
   }
 
   @font-face {
   font-family: 'GraphikRegular';
-  src: local('Lato'), url(../Assets/fonts/GraphikRegular.otf) format('opentype');
+  src: local('Graphik'), url(../Assets/fonts/GraphikRegular.otf) format('opentype');
   }
 
   @font-face {
   font-family: 'GraphikSemibold';
-  src: local('Lato'), url(../Assets/fonts/GraphikSemibold.otf) format('opentype');
+  src: local('Graphik'), url(../Assets/fonts/GraphikSemibold.otf) format('opentype');
   }
 
   h1, h2 {
