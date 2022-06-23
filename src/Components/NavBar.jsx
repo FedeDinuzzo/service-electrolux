@@ -37,7 +37,7 @@ const NavLeft = styled.div`
   width: calc(50% - 18px);
   height: ${theme.header.headerHeight};
   background: ${theme.colors.darkColorAlt};
-  border-radius: 0 50px 0 0;
+  border-radius: 0 46px 0 0;
   padding-top: 4px;
 `
 
@@ -52,7 +52,7 @@ const NavRight = styled.div`
   width: calc(50% - 18px);
   height: ${theme.header.headerHeight};
   background: ${theme.colors.darkColorAlt};
-  border-radius: 50px 0 0 0;
+  border-radius: 46px 0 0 0;
   padding-top: 4px;
 `
 
@@ -68,7 +68,7 @@ const WppLogo = styled.img`
 
 const NavText = styled.div`
   font-size: ${theme.fontSizesSmall.smallFontSize};
-  padding: ${theme.margins.m1} 0;
+  padding: 4px 4px 8px 4px;
 `
 
 const ImgNavInicio = styled.div`

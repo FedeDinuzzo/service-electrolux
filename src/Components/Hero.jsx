@@ -12,7 +12,7 @@ const LinearColor = styled.span`
 `
 
 const HeroContainer = styled.div`
-  height: 100vh;
+  height: 100vh - ${theme.header.headerHeight};
   width: 100vw;
   background: #090B12;
   display: grid; 
@@ -44,8 +44,9 @@ const HeroImg = styled.div`
 const HeroImgMobile = styled.div`
   display: block;
   width: 100%;
-  height: 480px;
+  height: 460px;
   background-repeat: no-repeat;
+  margin: -32px 0 -42px 0;
   background-size: fill;
   background-image: url(${heroImgMobile});
   background-position: 60%;
