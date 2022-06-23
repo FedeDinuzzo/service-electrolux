@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Button } from './button';
+import { Button, ButtonInside } from './button';
 import heroImg from '../Assets/Img/heroImg.webp';
 import heroImgMobile from '../Assets/Img/heroImgMobile.webp';
+import theme from '../theme';
 
 const LinearColor = styled.span`
   background: linear-gradient(to right, #30CEDF 0%, #1940B5 100%);;
@@ -29,7 +30,7 @@ const H1 = styled.h1`
 
 const HeroImg = styled.div`
   display: none;
-  @media (min-width: 900px) {
+  @media (min-width: ${theme.breakpoints.medium}) {
     display: block;
     width: 50%;
     height: 80%;
@@ -48,7 +49,7 @@ const HeroImgMobile = styled.div`
   background-size: fill;
   background-image: url(${heroImgMobile});
   background-position: 60%;
-  @media (min-width: 900px) {
+  @media (min-width: ${theme.breakpoints.medium}) {
     display: none;
   }
 `
@@ -73,7 +74,9 @@ function Hero() {
           <HeroImgMobile/>
           <h2>Servicio Técnico de Heladeras <LinearColor>en el día</LinearColor></h2>
           <h3>Reparación de heladeras Electrolux a domicilio, VISITAS SIN CARGO</h3>
-          <Button />
+          <Button ><ButtonInside>
+          sol
+          </ButtonInside></Button>
           <HeroButton href="">Solicitar Tecnico</HeroButton>
         </HeroContent>
         <HeroImg/>

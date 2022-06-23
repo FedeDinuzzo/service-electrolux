@@ -5,7 +5,7 @@ const theme = {
     large: '64rem',
   },
   header: {
-    headerHeight: '3.75rem',
+    headerHeight: '64px',
   },
   fonts: {
     fontSemi: '400',

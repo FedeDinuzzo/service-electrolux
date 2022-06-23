@@ -13,6 +13,7 @@ const NavMobile = styled.nav`
   position: fixed;
   bottom: 0;
   width: 100%;
+  z-index: 80;
   @media (min-width: 900px) {
     display: none;
   };
@@ -36,7 +37,7 @@ const NavLeft = styled.div`
   width: calc(50% - 18px);
   height: ${theme.header.headerHeight};
   background: ${theme.colors.darkColorAlt};
-  border-radius: 0 40px 0 0;
+  border-radius: 0 50px 0 0;
   padding-top: 4px;
 `
 
@@ -51,7 +52,7 @@ const NavRight = styled.div`
   width: calc(50% - 18px);
   height: ${theme.header.headerHeight};
   background: ${theme.colors.darkColorAlt};
-  border-radius: 40px 0 0 0;
+  border-radius: 50px 0 0 0;
   padding-top: 4px;
 `
 
@@ -62,11 +63,12 @@ const WppLogo = styled.img`
   left: 0;
   right: 0;
   margin: auto;
-  z-index: 10;
+  z-index: 100;
 `
 
 const NavText = styled.div`
   font-size: ${theme.fontSizesSmall.smallFontSize};
+  padding: ${theme.margins.m1} 0;
 `
 
 const ImgNavInicio = styled.div`
@@ -92,7 +94,6 @@ const ImgNavHeladeras = styled.div`
 `
 
 const ImgNavLavarropas = styled.div`
-  font-size: 4px;
   text-align: center;
   background-image: url(${lavarropas});
   background-position: center;
@@ -104,14 +105,13 @@ const ImgNavLavarropas = styled.div`
 `
 
 const ImgNavContacto = styled.div`
-  font-size: 4px;
   text-align: center;
   background-image: url(${contacto});
   background-position: center;
   border: none;
   background-repeat: no-repeat;
   background-size: contain;
-  height: 32px;
+  height: 30px;
   width: 100%;
 `
 
@@ -151,7 +151,7 @@ function NavBar() {
         <Link to="/"><ImgNavInicio /><NavText>Inicio</NavText></Link>
           <Link to="/heladeras"><ImgNavHeladeras /><NavText>Heladeras</NavText></Link>
         </NavLeft>
-          <WppLogo src={wppLogo} alt="" height="64px" width="64px"></WppLogo>
+          <WppLogo src={wppLogo} alt="" height="68px" width="68px"></WppLogo>
         <NavRight>  
           <Link to="/lavarropas"><ImgNavLavarropas /><NavText>Lavarropas</NavText></Link>
           <Link to="/contacto"><ImgNavContacto /><NavText>Contacto</NavText></Link>
