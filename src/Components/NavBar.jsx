@@ -14,7 +14,7 @@ const NavMobile = styled.nav`
   bottom: 0;
   width: 100%;
   z-index: 80;
-  @media (min-width: 900px) {
+  @media (min-width: ${theme.breakpoints.medium}) {
     display: none;
   };
 `
@@ -119,7 +119,7 @@ const NavDesktop = styled.div`
   width: 100%;
   height: 60px;
   background: #333;
-  @media (max-width: 900px) {
+  @media (max-width: ${theme.breakpoints.medium}) {
     display: none;
   };
 `

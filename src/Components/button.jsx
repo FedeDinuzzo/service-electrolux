@@ -16,3 +16,9 @@ export const ButtonInside = styled.div`
   padding: 1rem;
   border-radius: 10px;
 `
+
+export const LinearColor = styled.span`
+background: linear-gradient(to right, #30CEDF 0%, #1940B5 100%);;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+`

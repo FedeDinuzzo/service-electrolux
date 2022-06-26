@@ -1,15 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Button, ButtonInside } from './button';
+import { Button, ButtonInside, LinearColor } from './button';
 import heroImg from '../Assets/Img/heroImg.webp';
 import heroImgMobile from '../Assets/Img/heroImgMobile.webp';
 import theme from '../theme';
-
-const LinearColor = styled.span`
-  background: linear-gradient(to right, #30CEDF 0%, #1940B5 100%);;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-`
 
 const HeroContainer = styled.div`
   height: 100vh - ${theme.header.headerHeight};
@@ -25,6 +19,16 @@ const HeroContent = styled.div`
 `
 
 const H1 = styled.h1`
+  text-align: center;
+`
+
+const H2 = styled.h2`
+  text-align: center;
+  width: 80%;
+  display: block;
+  margin: 10px auto;
+`
+const H3 = styled.h2`
   text-align: center;
 `
 
@@ -64,8 +68,6 @@ const HeroButton = styled.button`
   border-style: none;
 `
 
-
-
 function Hero() {
   return (
     <>
@@ -73,8 +75,8 @@ function Hero() {
         <HeroContent>
           <H1 className="">Service <LinearColor>Electrolux</LinearColor></H1>
           <HeroImgMobile/>
-          <h2>Servicio Técnico de Heladeras <LinearColor>en el día</LinearColor></h2>
-          <h3>Reparación de heladeras Electrolux a domicilio, VISITAS SIN CARGO</h3>
+          <H2>Servicio Técnico de Heladeras <LinearColor>en el día</LinearColor></H2>
+          <H3>Reparación de heladeras Electrolux a domicilio, VISITAS SIN CARGO</H3>
           <Button ><ButtonInside>
           sol
           </ButtonInside></Button>
