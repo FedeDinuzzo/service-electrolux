@@ -2,11 +2,14 @@ import React from 'react';
 import styled from "styled-components";
 import theme from '../theme';
 import { Link } from 'react-router-dom';
+import logo from '../Assets/Img/logo.png';
 import wppLogo from '../Assets/Img/wppLogo.svg';
 import lavarropas from '../Assets/Img/lavarropas.svg';
 import heladera from '../Assets/Img/heladera.svg';
 import inicio from '../Assets/Img/snow.svg';
 import contacto from '../Assets/Img/contacto.svg';
+import DarkMode from '../Assets/Img/DarkMode.svg';
+import DarkModePoint from '../Assets/Img/DarkModePoint.svg';
 
 const NavMobile = styled.nav`
   display: block;
@@ -124,22 +127,41 @@ const NavDesktop = styled.div`
   };
 `
 
-const NavContainer = styled.div`
-  width: 100%;
-  height: 60px;
-  background: #333;
+const NavLogo = styled.img`
 `
 
-const NavLogo = styled.div`
+const NavTextDesktop = styled.p`
+  font-size: ${theme.fontSizesMedium.smallFontSize};
+  display: flex;
+  padding: 0 ${theme.margins.m1};
+`
+
+const DarkModeDiv = styled.div`
   height: 60px;
+  width: 60px;
+`
+
+
+const DarkModeDesktop = styled.img`
+  height: 60px;
+  width: 60px;
+`
+
+const DarkModePointDesktop = styled.img`
+  height: 60px;
+  width: 60px;
 `
 
 const NavDesktopUl = styled.div`
-  height: 60px;
+  display: flex;
 `
 
-const NavDesktopLi = styled.div`
+const WppLogoDesktop = styled.img`
+  position: absolute;
+  right: 24px;
+  bottom: 20px;
   height: 60px;
+  width: 60px;
 `
 
 function NavBar() {
@@ -161,15 +183,18 @@ function NavBar() {
 
 
     <NavDesktop>
-      <NavContainer>
-        <NavLogo>Ahmed</NavLogo>
-          <NavDesktopUl>
-            <NavDesktopLi>hola</NavDesktopLi>
-            <NavDesktopLi>hola</NavDesktopLi>
-            <NavDesktopLi>hola</NavDesktopLi>
-            <NavDesktopLi>hola</NavDesktopLi>
-          </NavDesktopUl>
-      </NavContainer>
+      <NavDesktopUl>
+        <NavLogo src={logo} alt="" height="30px" width="140px"></NavLogo>
+        <Link to="/"><NavTextDesktop>Inicio</NavTextDesktop></Link>
+        <Link to="/heladeras"><NavTextDesktop>Heladeras</NavTextDesktop></Link>
+        <Link to="/lavarropas"><NavTextDesktop>Lavarropas</NavTextDesktop></Link>
+        <Link to="/contacto"><NavTextDesktop>Contacto</NavTextDesktop></Link>
+        <DarkModeDiv>
+          <DarkModeDesktop src={DarkModePoint} alt="" height="68px" width="68px" />
+          <DarkModePointDesktop src={DarkMode} alt="" height="68px" width="68px" />
+        </DarkModeDiv>
+        <WppLogoDesktop src={wppLogo} alt="" height="60px" width="60px" />
+      </NavDesktopUl>
     </NavDesktop>
     </>
   )
