@@ -119,15 +119,21 @@ const ImgNavContacto = styled.div`
 `
 
 const NavDesktop = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   height: 60px;
-  background: #333;
+  background: ${theme.colors.darkColorAlt};
+  align-items: center;
   @media (max-width: ${theme.breakpoints.medium}) {
     display: none;
   };
 `
 
 const NavLogo = styled.img`
+  margin: 0 0 0 ${theme.margins.m6};
 `
 
 const NavTextDesktop = styled.p`
@@ -137,23 +143,30 @@ const NavTextDesktop = styled.p`
 `
 
 const DarkModeDiv = styled.div`
-  height: 60px;
-  width: 60px;
+
 `
 
-
 const DarkModeDesktop = styled.img`
-  height: 60px;
-  width: 60px;
+  position: absolute;
+  top: 17px;
+  right: 113px;
+  height: 25px;
+  width: 25px;
+  z-index: 100;
 `
 
 const DarkModePointDesktop = styled.img`
+  position: absolute;
+  top: 0px;
+  right: 80px;
   height: 60px;
   width: 60px;
+
 `
 
 const NavDesktopUl = styled.div`
   display: flex;
+  margin-right: 180px;
 `
 
 const WppLogoDesktop = styled.img`
@@ -183,8 +196,9 @@ function NavBar() {
 
 
     <NavDesktop>
+    <NavLogo src={logo} alt="" height="30px" width="140px"></NavLogo>
       <NavDesktopUl>
-        <NavLogo src={logo} alt="" height="30px" width="140px"></NavLogo>
+        
         <Link to="/"><NavTextDesktop>Inicio</NavTextDesktop></Link>
         <Link to="/heladeras"><NavTextDesktop>Heladeras</NavTextDesktop></Link>
         <Link to="/lavarropas"><NavTextDesktop>Lavarropas</NavTextDesktop></Link>
