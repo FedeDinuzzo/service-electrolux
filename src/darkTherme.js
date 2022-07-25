@@ -1,4 +1,15 @@
-const theme = {
+const darkTheme = {
+  colors: {
+    firstColor: '#30CEDF',
+    firstColorAlt: '#1940B5',
+    blueColor: '#2C98EC',
+    blueColorAlt: '#0A1843',
+    whiteColor: '#FFF',
+    lightColor: '#BAD8F0',
+    darkColor: '#1E1E1E',
+    darkColorAlt: '#202439',
+    black: '#090B12',
+  },
   breakpoints: {
     small: '22rem',
     medium: '42rem',
@@ -39,4 +50,4 @@ const theme = {
   }
 };
 
-export default theme;
+export default darkTheme;

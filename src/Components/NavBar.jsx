@@ -10,6 +10,8 @@ import inicio from '../Assets/Img/snow.svg';
 import contacto from '../Assets/Img/contacto.svg';
 import DarkMode from '../Assets/Img/DarkMode.svg';
 import DarkModePoint from '../Assets/Img/DarkModePoint.svg';
+import Switch from './Switch/Switch';
+import darkTheme from '../darkTherme';
 
 const NavMobile = styled.nav`
   display: block;
@@ -26,7 +28,7 @@ const NavMobileUl = styled.ul`
   display: flex;
   width: 100%;
   height: 30px;
-  background: ${theme.colors.darkColorAlt};
+  background: ${darkTheme.colors.darkColorAlt};
 `
 
 const NavLeft = styled.div`
@@ -203,6 +205,7 @@ function NavBar() {
         <Link to="/heladeras"><NavTextDesktop>Heladeras</NavTextDesktop></Link>
         <Link to="/lavarropas"><NavTextDesktop>Lavarropas</NavTextDesktop></Link>
         <Link to="/contacto"><NavTextDesktop>Contacto</NavTextDesktop></Link>
+        <Switch />
         <DarkModeDiv>
           <DarkModeDesktop src={DarkModePoint} alt="" height="68px" width="68px" />
           <DarkModePointDesktop src={DarkMode} alt="" height="68px" width="68px" />

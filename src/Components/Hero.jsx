@@ -8,7 +8,7 @@ import theme from '../theme';
 const HeroContainer = styled.div`
   height: 100vh - ${theme.header.headerHeight};
   width: 100vw;
-  background: #090B12;
+  background: ${theme.darkColors.black};
   display: grid; 
   @media (min-width: 900px) {
     grid-template-columns: 2;
@@ -78,7 +78,7 @@ function Hero() {
           <H2>Servicio Técnico de Heladeras <LinearColor>en el día</LinearColor></H2>
           <H3>Reparación de heladeras Electrolux a domicilio, VISITAS SIN CARGO</H3>
           <Button ><ButtonInside>
-          sol
+          messi
           </ButtonInside></Button>
           <HeroButton href="">Solicitar Tecnico</HeroButton>
         </HeroContent>
