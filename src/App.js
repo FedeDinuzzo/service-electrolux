@@ -24,12 +24,12 @@ export default function App() {
   return ( 
     <>
       <ThemeProvider theme={GlobalTheme && (isDarkTheme ? darkTheme : lightTheme)} >
-        <BrowserRouter>
+        <BrowserRouter> 
           <GlobalStyles />
           <Switch toggleTheme={toggleTheme} />
           <NavBar />
 
-          <Routes>   
+          <Routes> 
             <Route path="/" element={<Inicio />} />
             <Route path="/heladeras" element={<Heladeras />} />
             <Route path="/lavarropas" element={<Lavarropas />} />
