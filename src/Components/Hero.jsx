@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import { Button, ButtonInside, LinearColor } from './button';
 import heroImg from '../Assets/Img/heroImg.webp';
 import heroImgMobile from '../Assets/Img/heroImgMobile.webp';
-import theme from '../theme';
+import GlobalTheme from '../GlobalTheme';
 
 const HeroContainer = styled.div`
-  height: 100vh - ${theme.header.headerHeight};
+  height: 100vh - ${GlobalTheme.header.headerHeight};
   width: 100vw;
-  background: ${theme.darkColors.black};
+  background: ${(props) => props.theme.colors.black};
   display: grid; 
   @media (min-width: 900px) {
     grid-template-columns: 2;
@@ -34,7 +34,7 @@ const H3 = styled.h2`
 
 const HeroImg = styled.div`
   display: none;
-  @media (min-width: ${theme.breakpoints.medium}) {
+  @media (min-width: ${GlobalTheme.breakpoints.medium}) {
     display: block;
     width: 50%;
     height: 80%;
@@ -54,7 +54,7 @@ const HeroImgMobile = styled.div`
   background-size: fill;
   background-image: url(${heroImgMobile});
   background-position: 60%;
-  @media (min-width: ${theme.breakpoints.medium}) {
+  @media (min-width: ${GlobalTheme.breakpoints.medium}) {
     display: none;
   }
 `

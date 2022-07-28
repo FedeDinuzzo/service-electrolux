@@ -1,4 +1,4 @@
-const theme = {
+const GlobalTheme = {
   breakpoints: {
     small: '22rem',
     medium: '42rem',
@@ -39,4 +39,4 @@ const theme = {
   }
 };
 
-export default theme;
+export default GlobalTheme;

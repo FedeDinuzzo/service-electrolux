@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import theme from '../theme';
+import GlobalTheme from '../GlobalTheme';
 import { Link } from 'react-router-dom';
 import logo from '../Assets/Img/logo.png';
 import wppLogo from '../Assets/Img/wppLogo.svg';
@@ -10,8 +10,7 @@ import inicio from '../Assets/Img/snow.svg';
 import contacto from '../Assets/Img/contacto.svg';
 import DarkMode from '../Assets/Img/DarkMode.svg';
 import DarkModePoint from '../Assets/Img/DarkModePoint.svg';
-import Switch from './Switch/Switch';
-import darkTheme from '../darkTherme';
+
 
 const NavMobile = styled.nav`
   display: block;
@@ -19,7 +18,7 @@ const NavMobile = styled.nav`
   bottom: 0;
   width: 100%;
   z-index: 80;
-  @media (min-width: ${theme.breakpoints.medium}) {
+  @media (min-width: ${GlobalTheme.breakpoints.medium}) {
     display: none;
   };
 `
@@ -28,7 +27,7 @@ const NavMobileUl = styled.ul`
   display: flex;
   width: 100%;
   height: 30px;
-  background: ${darkTheme.colors.darkColorAlt};
+  background: ${(props) => props.theme.colors.darkColorAlt};
 `
 
 const NavLeft = styled.div`
@@ -40,8 +39,8 @@ const NavLeft = styled.div`
   left: 0;
   box-sizing: border-box;
   width: calc(50% - 18px);
-  height: ${theme.header.headerHeight};
-  background: ${theme.colors.darkColorAlt};
+  height: ${GlobalTheme.header.headerHeight};
+  background: ${(props) => props.theme.colors.darkColorAlt};
   border-radius: 0 46px 0 0;
   padding-top: 4px;
 `
@@ -55,8 +54,8 @@ const NavRight = styled.div`
   right: 0;
   box-sizing: border-box;
   width: calc(50% - 18px);
-  height: ${theme.header.headerHeight};
-  background: ${theme.colors.darkColorAlt};
+  height: ${GlobalTheme.header.headerHeight};
+  background: ${(props) => props.theme.colors.darkColorAlt};
   border-radius: 46px 0 0 0;
   padding-top: 4px;
 `
@@ -72,7 +71,7 @@ const WppLogo = styled.img`
 `
 
 const NavText = styled.div`
-  font-size: ${theme.fontSizesSmall.smallFontSize};
+  font-size: ${GlobalTheme.fontSizesSmall.smallFontSize};
   padding: 4px 4px 8px 4px;
 `
 
@@ -127,21 +126,21 @@ const NavDesktop = styled.div`
   justify-content: space-between;
   width: 100%;
   height: 60px;
-  background: ${theme.colors.darkColorAlt};
+  background: ${(props) => props.theme.colors.darkColorAlt};
   align-items: center;
-  @media (max-width: ${theme.breakpoints.medium}) {
+  @media (max-width: ${GlobalTheme.breakpoints.medium}) {
     display: none;
   };
 `
 
 const NavLogo = styled.img`
-  margin: 0 0 0 ${theme.margins.m6};
+  margin: 0 0 0 ${GlobalTheme.margins.m6};
 `
 
 const NavTextDesktop = styled.p`
-  font-size: ${theme.fontSizesMedium.smallFontSize};
+  font-size: ${GlobalTheme.fontSizesMedium.smallFontSize};
   display: flex;
-  padding: 0 ${theme.margins.m1};
+  padding: 0 ${GlobalTheme.margins.m1};
 `
 
 const DarkModeDiv = styled.div`
@@ -205,7 +204,6 @@ function NavBar() {
         <Link to="/heladeras"><NavTextDesktop>Heladeras</NavTextDesktop></Link>
         <Link to="/lavarropas"><NavTextDesktop>Lavarropas</NavTextDesktop></Link>
         <Link to="/contacto"><NavTextDesktop>Contacto</NavTextDesktop></Link>
-        <Switch />
         <DarkModeDiv>
           <DarkModeDesktop src={DarkModePoint} alt="" height="68px" width="68px" />
           <DarkModePointDesktop src={DarkMode} alt="" height="68px" width="68px" />

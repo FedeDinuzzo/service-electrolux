@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import theme from "./theme"
+import GlobalTheme from './GlobalTheme';
 
 const GlobalStyles = createGlobalStyle`
   ::before,::after{
@@ -14,8 +14,8 @@ const GlobalStyles = createGlobalStyle`
   body {  
     margin: 0;
     padding: 0;
-    color: ${theme.colors.whiteColor};
-    background-color: ${theme.colors.darkColor};
+    color: ${(props) => props.theme.colors.whiteColor};
+    background-color: ${(props) => props.theme.colors.darkColor};
     padding-bottom: 60px;
   }
 
@@ -30,12 +30,12 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h1, h2 {
-    color: ${theme.colors.whiteColor};
+    color: ${(props) => props.theme.colors.whiteColor};
     font-family: 'Graphik Semibold';
   }
 
   h3, p, a {
-    color:${theme.colors.whiteColor};
+    color:${(props) => props.theme.colors.whiteColor};
     font-family: 'Graphik Regular';
   }
 
@@ -49,48 +49,48 @@ const GlobalStyles = createGlobalStyle`
     text-decoration: none;
   }
 
-  @media (min-width: ${theme.breakpoints.small}) {
+  @media (min-width: ${GlobalTheme.breakpoints.small}) {
     h1 {
-      font-size: ${theme.fontSizesSmall.h1FontSize};
+      font-size: ${GlobalTheme.fontSizesSmall.h1FontSize};
     };
     h2 {
-      font-size: ${theme.fontSizesSmall.bigFontSize};
+      font-size: ${GlobalTheme.fontSizesSmall.bigFontSize};
     };
     h3 {
-      font-size: ${theme.fontSizesSmall.normalFontSize};
+      font-size: ${GlobalTheme.fontSizesSmall.normalFontSize};
     };
     p {
-      font-size: ${theme.fontSizesSmall.smallFontSize};
+      font-size: ${GlobalTheme.fontSizesSmall.smallFontSize};
     };
   }
 
-  @media (min-width: ${theme.breakpoints.medium}) {
+  @media (min-width: ${GlobalTheme.breakpoints.medium}) {
     h1 {
-      font-size: ${theme.fontSizesMedium.h1FontSize};
+      font-size: ${GlobalTheme.fontSizesMedium.h1FontSize};
     };
     h2 {
-      font-size: ${theme.fontSizesMedium.bigFontSize};
+      font-size: ${GlobalTheme.fontSizesMedium.bigFontSize};
     };
     h3 {
-      font-size: ${theme.fontSizesMedium.normalFontSize};
+      font-size: ${GlobalTheme.fontSizesMedium.normalFontSize};
     };
     p {
-      font-size: ${theme.fontSizesMedium.smallFontSize};
+      font-size: ${GlobalTheme.fontSizesMedium.smallFontSize};
     };
   }
 
-  @media (min-width: ${theme.breakpoints.large}) {
+  @media (min-width: ${GlobalTheme.breakpoints.large}) {
     h1 {
-      font-size: ${theme.fontSizesLarge.h1FontSize};
+      font-size: ${GlobalTheme.fontSizesLarge.h1FontSize};
     };
     h2 {
-      font-size: ${theme.fontSizesLarge.bigFontSize};
+      font-size: ${GlobalTheme.fontSizesLarge.bigFontSize};
     };
     h3 {
-      font-size: ${theme.fontSizesLarge.normalFontSize};
+      font-size: ${GlobalTheme.fontSizesLarge.normalFontSize};
     };
     p {
-      font-size: ${theme.fontSizesLarge.smallFontSize};
+      font-size: ${GlobalTheme.fontSizesLarge.smallFontSize};
     };
   }
 

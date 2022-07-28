@@ -9,7 +9,7 @@ const lightTheme = {
     darkColor: '#FFF',
     darkColorAlt: '#BAD8F0',
     black: '#eee',
-  },
+  }
 }
 
 export default lightTheme;
